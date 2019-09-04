@@ -1,3 +1,6 @@
 #'main' for running the hash data structure
 
-print("Testing")
+#Objective: To take a string and return the FIRST non repeated character
+
+str = input("Enter a string")
+
