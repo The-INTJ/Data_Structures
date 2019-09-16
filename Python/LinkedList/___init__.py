@@ -13,7 +13,7 @@ class Node(object):
     # Also notice that the declarations for the variables are IN the constructor
     def __init__(self, data=None, next_node=None):
         self.data = data  # Saving the passed value
-        self.next_node = next_node  # A complicated part
+        self.next_node = next_node  # Points to itself
 
     def get_data(self):
         return self.data
@@ -101,7 +101,7 @@ for i in range(5):
 list.print()
 print()  # for line break
 
-print(list.nthToLastNodeIter(3))
+print(list.nth_to_last_node_iter(3))
 
 
 
