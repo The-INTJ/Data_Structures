@@ -1,5 +1,6 @@
 # Implementation of a binary search tree
 
+
 class Node:
 
     def __init__(self, val):
@@ -59,15 +60,29 @@ class BinarySearchTree:
             else:
                 root.set_right(Node(data))
 
+    def levels(self):
+        if self.root is None:
+            print(0)
+        else:
+            print(self._levels(self.root))
+
+    def _levels(self, root):
+        if root is not None:
+            return 1 + max(self._levels(root.get_left()), self._levels(root.get_right()))
+        else:
+            return 0
+
 
 bst = BinarySearchTree()
-bst.insert(30)
-bst.insert(20)
-bst.insert(1000)
-bst.insert(40)
+bst.insert(3)
+bst.insert(2)
+bst.insert(9)
+bst.insert(4)
 bst.insert(1)
-bst.insert(33)
-bst.insert(70)
-bst.insert(60)
+bst.insert(5)
+bst.insert(7)
+bst.insert(6)
 
 bst.inorder()
+print()
+bst.levels()  # Height
