@@ -20,4 +20,12 @@ public class Node<T> {
         this.next = newNext;
     }
 
+    public T getData() {
+        return this.t;
+    }
+
+    public Node getNext() {
+        return this.next;
+    }
+
 }

@@ -7,6 +7,16 @@ public class Driver {
 
         SingularlyLinkedList sll = new SingularlyLinkedList(sNode);
 
+        for(int i = 0; i < 10; i++) {
+            if(i % 2 < 1) {
+                sll.add(new Node(i));
+            } else {
+                sll.add(new Node((char)i));
+            }
+        }
+
+        sll.printArray();
+
     }
 
 }
